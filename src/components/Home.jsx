@@ -3,7 +3,10 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 function Home() {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-center min-h-screen px-6 relative overflow-hidden bg-[#0f172a] text-gray-200">
+    <section
+      id="home"
+      className="flex flex-col md:flex-row items-center justify-center min-h-screen px-6 relative overflow-hidden bg-[#0f172a] text-gray-200"
+    >
       {/* Background Circle Decoration */}
       <div className="absolute -top-16 -left-16 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
       <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>

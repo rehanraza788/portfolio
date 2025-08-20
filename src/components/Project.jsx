@@ -1,74 +1,76 @@
 import React from "react";
+import { FaArrowRight } from "react-icons/fa";
+
+// Import images from src/assets
+import localNewsImg from "../assets/local_news_website.jpg";
+import msdImg from "../assets/msd project.jpg";
+import multiThemeImg from "../assets/multi-theme-changer.jpg";
 
 const projects = [
   {
-    title: "E-Commerce Website",
+    title: "Local News ",
     description:
       "A modern e-commerce web app with product listing, cart, and payment integration.",
-    image: "https://via.placeholder.com/400x250?text=E-Commerce+Template"
+    image: localNewsImg
   },
   {
-    title: "Portfolio Website",
+    title: "MSD Detailing",
     description:
       "Personal portfolio showcasing skills, projects, and contact details.",
-    image: "https://via.placeholder.com/400x250?text=Portfolio+Template"
+    image: msdImg
   },
   {
-    title: "Blog Platform",
+    title: "Theme Changer",
     description:
       "A blogging platform where users can create, edit, and share posts.",
-    image: "https://via.placeholder.com/400x250?text=Blog+Template"
-  },
-  {
-    title: "School Management System",
-    description: "A system for managing students, teachers, classes, and fees.",
-    image: "https://via.placeholder.com/400x250?text=School+Management+Template"
+    image: multiThemeImg
   }
 ];
 
 const Project = () => {
   return (
-    <section className="min-h-screen bg-gradient-to-r from-gray-100 via-white to-gray-100 py-16 px-6">
-      <h1 className="text-4xl font-bold text-gray-800 mb-12 text-center relative">
+    <section
+      id="project"
+      className="min-h-screen bg-gradient-to-br from-purple-100 via-white to-indigo-100 py-16 px-6"
+    >
+      <h1 className="text-5xl font-bold text-gray-900 mb-14 text-center font-[Poppins] tracking-tight">
         My <span className="text-indigo-600">Projects</span>
-        <span className="absolute left-1/2 transform -translate-x-1/2 bottom-[-8px] w-20 h-1 bg-indigo-600 rounded"></span>
       </h1>
 
-      {/* Project Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-        {projects.map((project, index) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+        {projects.map((project, idx) => (
           <div
-            key={index}
-            className="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 hover:shadow-2xl transition transform duration-300"
+            key={idx}
+            className="bg-white bg-opacity-70 backdrop-blur-lg rounded-3xl shadow-2xl overflow-hidden flex flex-col border border-indigo-100 transition-transform duration-300 hover:scale-105 hover:shadow-indigo-400"
+            style={{ fontFamily: "Poppins, sans-serif" }}
           >
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-48 object-cover"
+              className="w-full h-52 object-cover rounded-t-3xl"
             />
-            <div className="p-5">
-              <h2 className="text-xl font-semibold text-gray-800">
+            <div className="p-7 flex-1 flex flex-col">
+              <h2 className="text-2xl font-bold text-gray-900 mb-2 font-[Poppins]">
                 {project.title}
               </h2>
-              <p className="text-gray-600 mt-2">{project.description}</p>
-              <button className="mt-4 px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">
-                View Project
+              <p className="text-gray-600 mb-6 font-medium flex-1">
+                {project.description}
+              </p>
+              <button className="inline-flex items-center gap-2 text-indigo-600 hover:text-purple-600 font-semibold transition px-3 py-2 rounded-lg bg-indigo-50 hover:bg-purple-50 mt-auto font-[Poppins]">
+                View Project <FaArrowRight className="text-lg" />
               </button>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Extra Section About Projects */}
-      <div className="mt-16 text-center max-w-3xl mx-auto">
-        <p className="text-lg text-gray-700 leading-relaxed">
-          These are some of my project templates built with{" "}
-          <span className="font-semibold text-indigo-600">
-            React.js, Tailwind CSS, and Material UI
-          </span>
-          . Each project is designed with modern UI principles and optimized for
-          performance & responsiveness. You can customize these templates and
-          integrate APIs to make them fully functional.
+      <div className="mt-20 text-center max-w-2xl mx-auto">
+        <p className="text-lg text-gray-700 leading-relaxed font-[Poppins]">
+          These project templates use
+          <span className="font-bold text-indigo-600">React.js</span> and
+          <span className="font-bold text-indigo-600">Tailwind CSS</span>,
+          styled with modern <span className="text-purple-600">UI</span> and
+          performance principles—easily customizable!
         </p>
       </div>
     </section>

@@ -7,7 +7,10 @@ import {
 
 const Contact = () => {
   return (
-    <section className="min-h-screen bg-[#0f172a] text-gray-200 flex items-center justify-center px-6 py-16">
+    <section
+      id="contact"
+      className="min-h-screen bg-[#0f172a] text-gray-200 flex items-center justify-center px-6 py-16"
+    >
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Left Side - Contact Form */}
         <div className="bg-[#1e293b] p-8 rounded-xl shadow-lg border border-gray-700">
