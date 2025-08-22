@@ -50,9 +50,9 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="w-full py-3 rounded-lg font-semibold text-white bg-gradient-to-r from-pink-500 to-purple-600 hover:opacity-90 transition"
+              className="  w-full py-3 rounded-lg font-semibold text-white bg-black hover:opacity-90 transition"
             >
-              SEND MESSAGE ✉️
+              SEND MESSAGE
             </button>
           </form>
         </div>
