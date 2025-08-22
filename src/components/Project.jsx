@@ -11,18 +11,21 @@ const projects = [
     title: "Local News ",
     description:
       "A modern e-commerce web app with product listing, cart, and payment integration.",
+    url: "https://local-news-five.vercel.app/",
     image: localNewsImg
   },
   {
     title: "MSD Detailing",
     description:
       "Personal portfolio showcasing skills, projects, and contact details.",
+    url: "https://detailing-lake.vercel.app/",
     image: msdImg
   },
   {
     title: "Theme Changer",
     description:
       "A blogging platform where users can create, edit, and share posts.",
+    url: "https://multi-theme-switcher-kappa.vercel.app/",
     image: multiThemeImg
   }
 ];
@@ -56,9 +59,11 @@ const Project = () => {
               <p className="text-gray-600 mb-6 font-medium flex-1">
                 {project.description}
               </p>
-              <button className="inline-flex items-center gap-2 text-indigo-600 hover:text-purple-600 font-semibold transition px-3 py-2 rounded-lg bg-indigo-50 hover:bg-purple-50 mt-auto font-[Poppins]">
-                View Project <FaArrowRight className="text-lg" />
-              </button>
+              <a href={project.url} target="_rehan">
+                <button className="inline-flex items-center gap-2 text-indigo-600 hover:text-purple-600 font-semibold transition px-3 py-2 rounded-lg bg-indigo-50 hover:bg-purple-50 mt-auto font-[Poppins]">
+                  View Project <FaArrowRight className="text-lg" />
+                </button>
+              </a>
             </div>
           </div>
         ))}
