@@ -4,8 +4,14 @@ import {
   HiOutlinePhone,
   HiOutlineLocationMarker
 } from "react-icons/hi";
+import { IoIosMail } from "react-icons/io";
 
 const Contact = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Submitted Successfully");
+  };
+
   return (
     <section
       id="contact"
@@ -23,7 +29,7 @@ const Contact = () => {
             skills and interests.
           </p>
 
-          <form className="space-y-4">
+          <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
               <label className="block mb-2 text-sm">Your Name:</label>
               <input
@@ -50,9 +56,9 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="  w-full py-3 rounded-lg font-semibold text-white bg-black hover:opacity-90 transition"
+              className="  w-full py-3 rounded-lg font-semibold text-white bg-gray-900 hover:opacity-90 transition  flex justify-start pl-5 items-center gap-3"
             >
-              SEND MESSAGE
+              SEND MESSAGE <IoIosMail className="text-2xl" />
             </button>
           </form>
         </div>
