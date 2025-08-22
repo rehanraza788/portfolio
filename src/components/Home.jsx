@@ -20,10 +20,10 @@ function Home() {
           React.js Developer
         </span>
         <p className="text-lg md:text-xl text-gray-300 max-w-lg">
-          I love building{" "}
+          I love building
           <span className="font-semibold text-white">
             modern, responsive web apps
-          </span>{" "}
+          </span>
           that solve real-world problems and create meaningful user experiences.
         </p>
 
@@ -40,7 +40,7 @@ function Home() {
         {/* Social Icons */}
         <div className="flex space-x-6 mt-6 justify-center md:justify-start">
           <a
-            href="https://github.com/"
+            href="https://github.com/rehanraza788"
             target="_blank"
             rel="noopener noreferrer"
           >
