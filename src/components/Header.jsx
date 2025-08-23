@@ -35,7 +35,7 @@ const Header = () => {
               href="#home"
               className="bg-gradient-to-r from-yellow-400 to-pink-500 text-transparent bg-clip-text hover:from-pink-500 hover:to-yellow-400 transition-all duration-500"
             >
-              Rehan<span className="text-white">Raza</span>
+              Mohd Rehan<span className="text-white">Raza</span>
             </a>
           </div>
 
