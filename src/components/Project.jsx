@@ -5,12 +5,13 @@ import { FaArrowRight } from "react-icons/fa";
 import localNewsImg from "../assets/local_news_website.jpg";
 import msdImg from "../assets/msd project.jpg";
 import multiThemeImg from "../assets/multi-theme-changer.jpg";
+import curdOperation from "../assets/crud operation.jpg";
 
 const projects = [
   {
     title: "Local News ",
     description:
-      "A modern e-commerce web app with product listing, cart, and payment integration.",
+      "I developed a News Web Application using React.js and Material UI that provides daily news updates. The site includes categories like Breaking News, Elections, Entertainment, and Cricket for easy browsing. It also features videos, e-paper (PDF), and engaging stories for readers. This project highlights my skills in frontend development and responsive UI design.",
     url: "https://local-news-five.vercel.app/",
     image: localNewsImg
   },
@@ -27,6 +28,13 @@ const projects = [
       "A blogging platform where users can create, edit, and share posts.",
     url: "https://multi-theme-switcher-kappa.vercel.app/",
     image: multiThemeImg
+  },
+  {
+    title: "Crud Operation",
+    description:
+      "A simple CRUD app built with React.js and placeholder.json API, where users can add, view, update, and delete posts. It demonstrates my skills in API integration and state management.",
+    url: "https://rehanraza788.github.io/curd-operation/",
+    image: curdOperation
   }
 ];
 
@@ -50,7 +58,7 @@ const Project = () => {
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-52 object-cover rounded-t-3xl"
+              className="w-full h-52 object-fill rounded-t-3xl"
             />
             <div className="p-7 flex-1 flex flex-col">
               <h2 className="text-2xl font-bold text-gray-900 mb-2 font-[Poppins]">
