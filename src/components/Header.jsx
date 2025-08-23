@@ -32,7 +32,7 @@ const Header = () => {
           {/* Logo */}
           <div className="text-2xl font-extrabold tracking-wide">
             <a
-              href="#home"
+              href="/home"
               className="bg-gradient-to-r from-yellow-400 to-pink-500 text-transparent bg-clip-text hover:from-pink-500 hover:to-yellow-400 transition-all duration-500"
             >
               Rehan<span className="text-white">Raza</span>
