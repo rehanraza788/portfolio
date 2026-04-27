@@ -34,28 +34,29 @@ const About = () => {
           <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
             Hi, I’m{" "}
             <span className="text-cyan-300 font-semibold">Mohd Rehan Raza</span>
-            , a passionate{" "}
+            , a{" "}
             <span className="text-cyan-300 font-semibold">
-              React.js Developer
+              Frontend Developer
             </span>{" "}
-            with <span className="text-cyan-300">1 year and 1 month</span> of
+            with <span className="text-cyan-300">2+ years</span> of
             professional experience at{" "}
-            <span className="text-cyan-300 font-semibold">Noble-Wave</span>.
+            <span className="text-cyan-300 font-semibold">Noble Wave</span>{" "}
+            (Feb 2024 – Present).
           </p>
           <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-6">
-            I specialize in building modern, responsive, and user-friendly web
-            applications. My core expertise lies in React.js, JavaScript, and
-            front-end development, with a strong focus on clean UI/UX design and
-            performance optimization.
+            I specialize in building scalable Single Page Applications (SPA) using
+            React.js, Next.js, and modern frontend technologies. My expertise includes
+            REST API integration, state management with Context API and Zustand, and
+            responsive design using Tailwind CSS and Material UI.
           </p>
           <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-6">
-            Beyond coding, I’m always eager to learn new technologies and
-            improve my problem-solving skills. I enjoy collaborating with teams,
-            contributing to projects that make an impact, and constantly pushing
-            myself to grow as a developer.
+            I focus on performance optimization through lazy loading and code splitting,
+            building reusable components, and delivering seamless user experiences.
+            I’m passionate about clean code, modern UI/UX design, and staying updated
+            with the latest frontend technologies.
           </p>
           <p className="text-lg md:text-xl text-gray-400 leading-relaxed">
-            🎓 I have completed my graduation ( BCA ) from{" "}
+            🎓 I hold a Bachelor of Computer Applications (BCA) from{" "}
             <span className="text-cyan-300 font-semibold">
               Dr. Ram Manohar Lohia Awadh University, Ayodhya
             </span>

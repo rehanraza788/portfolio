@@ -53,6 +53,10 @@ const Header = () => {
               Skill
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-yellow-400 to-pink-500 transition-all group-hover:w-full"></span>
             </a>
+            <a href="#experience" className="relative text-white font-medium group">
+              Experience
+              <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-yellow-400 to-pink-500 transition-all group-hover:w-full"></span>
+            </a>
             <a
               href="#project"
               className="relative text-white font-medium group"
@@ -101,6 +105,13 @@ const Header = () => {
             onClick={() => setIsOpen(false)}
           >
             Skill
+          </a>
+          <a
+            href="#experience"
+            className="block text-white text-lg font-medium hover:text-yellow-400 transition"
+            onClick={() => setIsOpen(false)}
+          >
+            Experience
           </a>
           <a
             href="#project"

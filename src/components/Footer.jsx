@@ -16,7 +16,7 @@ const Footer = () => {
         {/* Social Icons */}
         <div className="flex space-x-6 text-2xl mb-6">
           <a
-            href="https://github.com"
+            href="https://github.com/rehanraza788"
             target="_blank"
             rel="noreferrer"
             className="hover:text-yellow-400 transition"
@@ -24,28 +24,12 @@ const Footer = () => {
             <FaGithub />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://linkedin.com/in/rehanraza"
             target="_blank"
             rel="noreferrer"
             className="hover:text-blue-400 transition"
           >
             <FaLinkedin />
-          </a>
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-sky-400 transition"
-          >
-            <FaTwitter />
-          </a>
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-blue-500 transition"
-          >
-            <FaFacebook />
           </a>
         </div>
 

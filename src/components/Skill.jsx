@@ -1,49 +1,83 @@
 import React from "react";
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact } from "react-icons/fa";
-import { SiTailwindcss, SiMui } from "react-icons/si";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJsSquare,
+  FaReact,
+  FaNodeJs
+} from "react-icons/fa";
+import { SiTailwindcss, SiMui, SiNextdotjs, SiReactrouter } from "react-icons/si";
 
 const skills = [
   {
-    name: "HTML",
+    name: "React.js",
+    icon: <FaReact className="text-cyan-500" size={40} />,
+    level: 90,
+    colorFrom: "#22D3EE", // cyan-400
+    colorTo: "#0891B2" // cyan-600
+  },
+  {
+    name: "Next.js",
+    icon: <SiNextdotjs className="text-black" size={40} />,
+    level: 85,
+    colorFrom: "#000000", // black
+    colorTo: "#333333" // dark gray
+  },
+  {
+    name: "JavaScript",
+    icon: <FaJsSquare className="text-yellow-400" size={40} />,
+    level: 88,
+    colorFrom: "#FACC15", // yellow-400
+    colorTo: "#EAB308" // yellow-500
+  },
+  {
+    name: "HTML5",
     icon: <FaHtml5 className="text-orange-500" size={40} />,
     level: 95,
     colorFrom: "#F97316", // amber-500
     colorTo: "#F59E0B" // amber-400
   },
   {
-    name: "CSS",
+    name: "CSS3",
     icon: <FaCss3Alt className="text-blue-500" size={40} />,
-    level: 90,
+    level: 92,
     colorFrom: "#3B82F6", // blue-500
     colorTo: "#2563EB" // blue-600
   },
   {
-    name: "JavaScript",
-    icon: <FaJsSquare className="text-yellow-400" size={40} />,
-    level: 85,
-    colorFrom: "#FACC15", // yellow-400
-    colorTo: "#EAB308" // yellow-500
-  },
-  {
-    name: "React.js",
-    icon: <FaReact className="text-cyan-500" size={40} />,
-    level: 88,
-    colorFrom: "#22D3EE", // cyan-400
-    colorTo: "#0891B2" // cyan-600
-  },
-  {
     name: "Tailwind CSS",
     icon: <SiTailwindcss className="text-teal-400" size={40} />,
-    level: 80,
+    level: 90,
     colorFrom: "#0D9488", // teal-600
     colorTo: "#14B8A6" // teal-500
   },
   {
     name: "Material UI",
     icon: <SiMui className="text-blue-600" size={40} />,
-    level: 75,
+    level: 85,
     colorFrom: "#2563EB", // blue-600
     colorTo: "#3B82F6" // blue-500
+  },
+  {
+    name: "Context API",
+    icon: <FaReact className="text-blue-400" size={40} />,
+    level: 88,
+    colorFrom: "#61DAFB", // react blue
+    colorTo: "#2196F3" // darker blue
+  },
+  {
+    name: "Zustand",
+    icon: <FaNodeJs className="text-green-500" size={40} />,
+    level: 82,
+    colorFrom: "#68D391", // green-300
+    colorTo: "#38A169" // green-500
+  },
+  {
+    name: "REST API",
+    icon: <SiReactrouter className="text-pink-500" size={40} />,
+    level: 85,
+    colorFrom: "#EC4899", // pink-400
+    colorTo: "#DB2777" // pink-600
   }
 ];
 
@@ -64,17 +98,23 @@ const Skill = () => {
       </h1>
 
       {/* Subtitle */}
-      <p className="text-gray-600 text-lg md:text-xl max-w-xl text-center mb-14 px-4">
-        Tools & technologies I use to build{" "}
+      <p className="text-gray-600 text-lg md:text-xl max-w-3xl text-center mb-14 px-4">
+        Expertise in{" "}
         <span className="text-indigo-600 font-semibold">
-          modern, responsive
-        </span>{" "}
-        and <span className="text-purple-600 font-semibold">interactive</span>{" "}
-        applications.
+          React.js, Next.js, JavaScript
+        </span>
+        , with strong skills in{" "}
+        <span className="text-purple-600 font-semibold">
+          state management (Context API, Zustand)
+        </span>
+        , and modern UI frameworks like{" "}
+        <span className="text-indigo-600 font-semibold">
+          Tailwind CSS and Material UI
+        </span>.
       </p>
 
       {/* Skills Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 max-w-5xl w-full">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 max-w-6xl w-full">
         {skills.map(({ name, icon, level, colorFrom, colorTo }, index) => {
           // strokeDashoffset for filled portion
           const offset = circumference - (circumference * level) / 100;

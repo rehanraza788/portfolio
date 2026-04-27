@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 function Home() {
   // Typing effect for role
-  const roles = ["React.js Developer"];
+  const roles = ["Frontend Developer", "React.js Developer", "Next.js Developer"];
   const [roleIndex, setRoleIndex] = useState(0);
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -57,8 +57,9 @@ function Home() {
           <span className="text-indigo-400 blinking-cursor">|</span>
         </p>
         <p className="max-w-lg text-gray-300">
-          Crafting sleek, modern web applications with engaging UI and seamless
-          functionality.
+          Specializing in building scalable Single Page Applications (SPA) with
+          React.js, Next.js, and modern frontend technologies. Expert in REST API
+          integration, state management, and performance optimization.
         </p>
 
         {/* Buttons */}

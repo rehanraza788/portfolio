@@ -67,39 +67,31 @@ const Contact = () => {
         <div className="flex flex-col justify-center space-y-6">
           <div className="flex items-center space-x-4">
             <HiOutlineMail size={28} className="text-green-400" />
-            <span>rraza9123@gmail.com</span>
+            <a href="mailto:rraza9123@gmail.com" className="hover:text-green-300 transition">
+              rraza9123@gmail.com
+            </a>
           </div>
           <div className="flex items-center space-x-4">
             <HiOutlinePhone size={28} className="text-green-400" />
-            <span>+91 8090670632</span>
+            <a href="tel:+918090670632" className="hover:text-green-300 transition">
+              +91 8090670632
+            </a>
           </div>
           <div className="flex items-center space-x-4">
             <HiOutlineLocationMarker size={28} className="text-green-400" />
-            <span>New Delhi India 110080</span>
+            <span>New Delhi, India</span>
           </div>
 
           {/* Social Links */}
           <div className="flex space-x-6 mt-6">
-            <a href="https://github.com" target="_blank" rel="noreferrer">
+            <a href="https://github.com/rehanraza788" target="_blank" rel="noreferrer">
               <FaGithub
                 size={32}
                 className="text-gray-400 hover:text-green-400 transition"
               />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+            <a href="https://linkedin.com/in/rehanraza" target="_blank" rel="noreferrer">
               <FaLinkedin
-                size={32}
-                className="text-gray-400 hover:text-green-400 transition"
-              />
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noreferrer">
-              <FaTwitter
-                size={32}
-                className="text-gray-400 hover:text-green-400 transition"
-              />
-            </a>
-            <a href="https://facebook.com" target="_blank" rel="noreferrer">
-              <FaFacebook
                 size={32}
                 className="text-gray-400 hover:text-green-400 transition"
               />
