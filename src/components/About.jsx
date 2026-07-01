@@ -36,7 +36,7 @@ const About = () => {
             <span className="text-cyan-300 font-semibold">Mohd Rehan Raza</span>
             , a{" "}
             <span className="text-cyan-300 font-semibold">
-              Frontend Developer
+              Frontend Developer & AI Prompt Engineer
             </span>{" "}
             with <span className="text-cyan-300">2+ years</span> of
             professional experience at{" "}
@@ -48,6 +48,9 @@ const About = () => {
             React.js, Next.js, and modern frontend technologies. My expertise includes
             REST API integration, state management with Context API and Zustand, and
             responsive design using Tailwind CSS and Material UI.
+          </p>
+          <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-6">
+            I am highly skilled in AI-assisted development and prompt engineering, leveraging Generative AI tools like ChatGPT and Claude AI to accelerate implementation, debug complex codebases, and optimize UI generation.
           </p>
           <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-6">
             I focus on performance optimization through lazy loading and code splitting,

@@ -2,9 +2,10 @@ import profileImg from "../assets/rehan.png";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
+// Typing effect roles
+const roles = ["Frontend Developer", "React.js Developer", "AI Prompt Engineer"];
+
 function Home() {
-  // Typing effect for role
-  const roles = ["Frontend Developer", "React.js Developer", "Next.js Developer"];
   const [roleIndex, setRoleIndex] = useState(0);
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -29,7 +30,7 @@ function Home() {
       setRoleIndex(roleIndex + 1);
     }
     return () => clearTimeout(timer);
-  }, [text, isDeleting, roleIndex, roles]);
+  }, [text, isDeleting, roleIndex]);
 
   return (
     <section
@@ -57,9 +58,7 @@ function Home() {
           <span className="text-indigo-400 blinking-cursor">|</span>
         </p>
         <p className="max-w-lg text-gray-300">
-          Specializing in building scalable Single Page Applications (SPA) with
-          React.js, Next.js, and modern frontend technologies. Expert in REST API
-          integration, state management, and performance optimization.
+          Frontend Developer with 2+ years of experience specializing in React.js, JavaScript, and modern UI development. Skilled in AI-assisted development and prompt engineering using Generative AI tools like ChatGPT and Claude AI to accelerate development, debugging, and UI generation.
         </p>
 
         {/* Buttons */}

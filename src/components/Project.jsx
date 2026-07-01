@@ -1,56 +1,34 @@
 import React, { useState } from "react";
-import { FaArrowRight, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaArrowRight, FaGithub, FaExternalLinkAlt, FaGooglePlay } from "react-icons/fa";
 
 // Import images from src/assets
 import localNewsImg from "../assets/local_news_website.jpg";
-import msdImg from "../assets/msd project.jpg";
-import multiThemeImg from "../assets/multi-theme-changer.jpg";
-import curdOperation from "../assets/crud operation.jpg";
-
+import nobleSalahImg from "../assets/noble_salah_app.png";
 const projects = [
+  {
+    title: "Noble Salah – Mobile Application",
+    description:
+      "Developed a feature-rich Islamic mobile application with real-time prayer timings and Athan notifications based on user location and time zone. Features include Quran reading, audio playback, Qibla Compass, Tasbih Counter, Prayer Tracker, Hijri Calendar, and statistics dashboard. Utilized AI-assisted development and prompt engineering techniques using Claude AI to accelerate feature implementation.",
+    url: "https://salah.noble-wave.com/",
+    playStore: "https://play.google.com/store/apps/details?id=com.noblewave.noblesalah",
+    github: "",
+    image: nobleSalahImg,
+    techStack: ["Flutter", "Dart", "SQLite", "API Integration", "Location Services", "AI-assisted Dev"],
+    featured: true
+  },
   {
     title: "Local News Web Application",
     description:
-      "A responsive news web application built using React.js with REST API integration. Features include real-time news data, categories (Breaking News, Elections, Entertainment, Cricket), videos, e-paper (PDF), and engaging stories.",
+      "A responsive news web application built using React.js and React Router with REST API integration. Features include real-time news data, categories (Breaking News, Elections, Entertainment, Cricket), videos, e-paper (PDF), and engaging stories. Optimized performance using lazy loading and code splitting.",
     url: "https://local-news-five.vercel.app/",
-    github: "",
+    github: "https://github.com/rehanraza788/",
     image: localNewsImg,
-    techStack: ["React.js", "JavaScript", "Tailwind CSS", "REST API"],
+    techStack: ["React.js", "JavaScript", "Tailwind CSS", "REST API", "React Router"],
     featured: true
-  },
-  {
-    title: "E-commerce Web Application",
-    description:
-      "A responsive e-commerce frontend with product listing, cart functionality, and state management using React Hooks. Features a clean UI with responsive design built using Tailwind CSS.",
-    url: "#",
-    github: "",
-    image: msdImg,
-    techStack: ["React.js", "JavaScript", "Tailwind CSS", "React Hooks"],
-    featured: true
-  },
-  {
-    title: "Multi-Theme Changer",
-    description:
-      "A dynamic theme switching application that allows users to toggle between multiple color themes. Demonstrates expertise in React state management and CSS customization.",
-    url: "https://multi-theme-switcher-kappa.vercel.app/",
-    github: "",
-    image: multiThemeImg,
-    techStack: ["React.js", "JavaScript", "CSS", "State Management"],
-    featured: false
-  },
-  {
-    title: "CRUD Operation App",
-    description:
-      "A simple CRUD application built with React.js and REST API integration, where users can create, view, update, and delete posts. Demonstrates skills in API integration and state management.",
-    url: "https://rehanraza788.github.io/curd-operation/",
-    github: "https://github.com/rehanraza788/curd-operation",
-    image: curdOperation,
-    techStack: ["React.js", "JavaScript", "REST API", "CRUD"],
-    featured: false
   }
 ];
 
-const ProjectCard = ({ project, index }) => {
+const ProjectCard = ({ project }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -72,27 +50,37 @@ const ProjectCard = ({ project, index }) => {
         />
         {/* Overlay on hover */}
         <div
-          className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-opacity duration-500 ${
+          className={`absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-transparent transition-opacity duration-500 ${
             isHovered ? "opacity-100" : "opacity-0"
           }`}
         >
-          <div className="absolute bottom-4 left-4 right-4 flex gap-3">
+          <div className="absolute bottom-4 left-3 right-3 flex flex-wrap gap-2 justify-center">
             <a
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 bg-white text-indigo-600 py-2 px-4 rounded-lg font-semibold text-sm flex items-center justify-center gap-2 hover:bg-indigo-50 transition"
+              className="flex-1 min-w-[80px] bg-white text-indigo-600 py-2 px-2.5 rounded-lg font-bold text-xs flex items-center justify-center gap-1 hover:bg-indigo-50 transition"
             >
-              <FaExternalLinkAlt size={14} /> Live Demo
+              <FaExternalLinkAlt size={11} /> Demo
             </a>
+            {project.playStore && (
+              <a
+                href={project.playStore}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 min-w-[80px] bg-green-600 text-white py-2 px-2.5 rounded-lg font-bold text-xs flex items-center justify-center gap-1 hover:bg-green-700 transition"
+              >
+                <FaGooglePlay size={11} /> Play Store
+              </a>
+            )}
             {project.github && (
               <a
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gray-800 text-white py-2 px-4 rounded-lg font-semibold text-sm flex items-center justify-center gap-2 hover:bg-gray-700 transition"
+                className="flex-1 min-w-[80px] bg-gray-800 text-white py-2 px-2.5 rounded-lg font-bold text-xs flex items-center justify-center gap-1 hover:bg-gray-750 transition"
               >
-                <FaGithub size={14} /> Code
+                <FaGithub size={11} /> Code
               </a>
             )}
           </div>
@@ -110,32 +98,42 @@ const ProjectCard = ({ project, index }) => {
         <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-3 line-clamp-1">
           {project.title}
         </h3>
-        <p className="text-gray-600 text-sm sm:text-base mb-4 line-clamp-3 leading-relaxed">
+        <p className="text-gray-600 text-sm sm:text-base mb-4 line-clamp-4 leading-relaxed h-[100px] overflow-hidden">
           {project.description}
         </p>
 
         {/* Tech Stack */}
-        <div className="flex flex-wrap gap-2 mb-5">
+        <div className="flex flex-wrap gap-2 mb-5 h-[70px] overflow-hidden content-start">
           {project.techStack.map((tech, idx) => (
             <span
               key={idx}
-              className="px-3 py-1 text-xs font-medium bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-700 rounded-full border border-indigo-200 hover:border-indigo-400 hover:shadow-md transition-all duration-300 cursor-default"
+              className="px-2.5 py-0.5 text-[11px] font-semibold bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-700 rounded-full border border-indigo-200 hover:border-indigo-400 hover:shadow-sm transition-all duration-300 cursor-default"
             >
               {tech}
             </span>
           ))}
         </div>
 
-        {/* Mobile Only Button */}
-        <div className="md:hidden">
+        {/* Mobile Only Buttons */}
+        <div className="md:hidden flex flex-col gap-2">
           <a
             href={project.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 px-4 rounded-lg font-semibold flex items-center justify-center gap-2 hover:from-indigo-700 hover:to-purple-700 transition"
+            className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-2 px-4 rounded-lg font-semibold flex items-center justify-center gap-2 hover:from-indigo-700 hover:to-purple-700 transition text-sm"
           >
-            View Project <FaArrowRight size={16} />
+            View Project <FaArrowRight size={14} />
           </a>
+          {project.playStore && (
+            <a
+              href={project.playStore}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-green-600 text-white py-2 px-4 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-green-700 transition text-sm"
+            >
+              View on Play Store <FaGooglePlay size={14} />
+            </a>
+          )}
         </div>
       </div>
 

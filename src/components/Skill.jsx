@@ -4,7 +4,8 @@ import {
   FaCss3Alt,
   FaJsSquare,
   FaReact,
-  FaNodeJs
+  FaNodeJs,
+  FaBrain
 } from "react-icons/fa";
 import { SiTailwindcss, SiMui, SiNextdotjs, SiReactrouter } from "react-icons/si";
 
@@ -29,6 +30,13 @@ const skills = [
     level: 88,
     colorFrom: "#FACC15", // yellow-400
     colorTo: "#EAB308" // yellow-500
+  },
+  {
+    name: "AI Prompt Engineering",
+    icon: <FaBrain className="text-pink-500" size={40} />,
+    level: 92,
+    colorFrom: "#EC4899", // pink-500
+    colorTo: "#8B5CF6" // purple-500
   },
   {
     name: "HTML5",
@@ -103,14 +111,15 @@ const Skill = () => {
         <span className="text-indigo-600 font-semibold">
           React.js, Next.js, JavaScript
         </span>
+        , and{" "}
+        <span className="text-pink-600 font-semibold">
+          AI Prompt Engineering (ChatGPT, Claude AI)
+        </span>
         , with strong skills in{" "}
         <span className="text-purple-600 font-semibold">
           state management (Context API, Zustand)
         </span>
-        , and modern UI frameworks like{" "}
-        <span className="text-indigo-600 font-semibold">
-          Tailwind CSS and Material UI
-        </span>.
+        , and responsive styling.
       </p>
 
       {/* Skills Grid */}
